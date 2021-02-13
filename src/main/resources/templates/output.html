@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+</head>
+<body>
+<div style="text-align:center;">
+    <p th:text="'You selected: ' + ${UserData._gameOption}" />
+    <p th:text="'Computer selected: ' + ${UserData._ComputerOption}" />
+    <p th:text="${UserData._Result}" />
+
+    <a th:href="@{input}">Play Again</a>
+</div>
+</body>
+</html>
