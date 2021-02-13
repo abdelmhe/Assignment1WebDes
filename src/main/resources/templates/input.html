@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+</head>
+<body>
+<div style="text-align:center;">Rock Paper and Scissors Game
+
+    <form method="post" th:action="@{/output}" th:object="${UserData}">
+        <div th:each="model : ${T(ca.sheridancollege.abdelmhe.GameOptions).values()}">
+            <div class="custom-control custom-radio custom-control-inline">
+                <img th:src="${model} + '.jpg'" height="50" width="50"/>
+                <br/>
+                <input type="radio" th:field="${UserData._gameOption}" th:value="${model}">
+                <label class="custom-control-label" th:text="${model}">model</label>
+                <br/>
+                <br/>
+            </div>
+        </div>
+        <input type="submit" value="Play" />
+    </form>
+
+</div>
+</body>
+</html>
