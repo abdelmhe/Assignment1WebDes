@@ -22,4 +22,10 @@ public class GameController {
     public String outputPage(@RequestParam String _gameOption, Model model) {
 
         UserData userData = new UserData();
+        /*Computer picks one option randomly*/
+        String[] list = {"Stone", "Paper", "Scissor"};
+        Random r = new Random();
+        String comp = list[r.nextInt(list.length)];
+        userData.set_ComputerOption(comp);
+
     }
