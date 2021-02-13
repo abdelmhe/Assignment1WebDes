@@ -71,4 +71,13 @@ public class GameController {
                 }
                 break;
         }
+        //Send the final model to view with results
+        model.addAttribute("UserData", userData);
+
+        return "output";
+    }
+}
+
+
+
 
